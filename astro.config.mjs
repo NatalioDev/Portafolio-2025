@@ -7,5 +7,6 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   // site: 'https://NatalioDev.github.io',
   // base: '/astro-landing-page-dropdown/',
-  integrations: [react(), tailwind()]
+  integrations: [react(), tailwind()],
+  base: '/Portafolio-2025/',
 });

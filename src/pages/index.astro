@@ -1,4 +1,5 @@
 ---
+
 import MainLayout from "../layouts/MainLayout.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Skills from "../components/Skills.astro";
@@ -9,7 +10,8 @@ import GitHubIcon from "../components/Icons/GitHub.astro";
 import MailIcon from "../components/Icons/Mail.astro";
 import CodeIcon from "../components/Icons/Code.astro";
 import SectionContainer from "src/components/Container/SectionContainer.astro";
-import CardNormal from "src/components/Cards/CardNormal.astro";
+import CardNormal from "../components/Cards/CardNormal.astro";
+import RubikCube from "../components/RubikCube";
 ---
 
 <MainLayout
@@ -17,8 +19,8 @@ import CardNormal from "src/components/Cards/CardNormal.astro";
   description="Contrata a Natalio Di Giacomo para crear tu aplicación web Frontend. Desarrollador Web."
 >
   <main class="px-4 overflow-x-hidden"> <!-- Agregar overflow-x-hidden para evitar el scroll horizontal -->
-    <SectionContainer id="inicio" class="pt-24 lg:pt-0">
-      <div class="flex flex-col md:flex-row items-center gap-8 mb-0 pb-0">
+    <SectionContainer id="inicio" class="pt-24 min-h-screen">
+      <div class="flex flex-col md:flex-row items-center gap-8 mb-0 pb-4 pt-6">
         <!-- Texto de presentación -->
         <div class="w-full md:w-1/2 lg:w-2/3 z-20">
           <h1 class="
@@ -55,6 +57,7 @@ import CardNormal from "src/components/Cards/CardNormal.astro";
         <!-- Contenedor del cubo de Rubik -->
         <div id="rubik-container" class="w-full md:w-1/2 lg:w-1/3 flex justify-center max-w-[400px] mx-auto py-[-24px]">
         <!-- El cubo de Rubik se renderizará aquí -->
+          <RubikCube client:only="react"/>
         </div>
     </div>
     </SectionContainer>
@@ -82,9 +85,6 @@ import CardNormal from "src/components/Cards/CardNormal.astro";
       <CardNormal />
     </SectionContainer>
   </main>
-
-  <!-- Script para el cubo de Rubik -->
-  <script type="module" src="/src/js/rubik.js" defer></script>
 </MainLayout>
 
 <style>
