@@ -1,11 +1,123 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Skills from "../components/Skills.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Icons
+import LinkedInIcon from "../components/Icons/LinkedIn.astro";
+import GitHubIcon from "../components/Icons/GitHub.astro";
+import MailIcon from "../components/Icons/Mail.astro";
+import CodeIcon from "../components/Icons/Code.astro";
+import SectionContainer from "src/components/Container/SectionContainer.astro";
+import CardNormal from "src/components/Cards/CardNormal.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout
+  title="Porfolio de Natalio Di Giacomo - Desarrollador y Programador Web Frontend"
+  description="Contrata a Natalio Di Giacomo para crear tu aplicación web Frontend. Desarrollador Web."
+>
+  <main class="px-4 overflow-x-hidden"> <!-- Agregar overflow-x-hidden para evitar el scroll horizontal -->
+    <SectionContainer id="inicio" class="pt-24 lg:pt-0">
+      <div class="flex flex-col md:flex-row items-center gap-8 mb-0 pb-0">
+        <!-- Texto de presentación -->
+        <div class="w-full md:w-1/2 lg:w-2/3 z-20">
+          <h1 class="
+            text-white text-3xl md:text-4xl lg:text-5xl font-bold pb-2 lg:pb-4
+            drop-shadow-[2px_2px_2px_rgba(0,0,0,1)]
+          ">
+            Natalio <br> Di Giacomo
+          </h1>
+          <h2 class="
+            text-xl font-bold lg:text-2xl text-wrap max-w-[700px] 
+            text-[#43d330] 
+            inset-text-effect">
+            Developer
+          </h2>
+          <p class="text-base lg:text-lg mb-4 text-pretty py-2">
+            Como autodidacta en el desarrollo web y el deseo de conocimiento, me adentré en el mundo de la programación.
+            <br>
+            Mi habilidad para enfrentar nuevos conceptos y tecnologías, es una prueba de mi dedicación al crecimiento continuo.
+            <br>
+            Apasionado por la escritura de código limpio y eficiente para construir interfaces web modernas y visualmente atractivas.
+          </p>
+          <nav class="flex gap-4 mt-8 flex-wrap">
+            <SocialPill href="https://www.linkedin.com/in/natalio-di-giacomo/">
+              <LinkedInIcon class="size-4 md:size-6" />
+            </SocialPill>
+            <SocialPill href="https://github.com/NatalioDev">
+              <GitHubIcon class="size-4 md:size-6" />
+            </SocialPill>
+            <SocialPill href="mailto:nataliodg.dev@gmail.com">
+              <MailIcon class="size-4 md:size-6" />
+            </SocialPill>
+          </nav>
+        </div>
+        <!-- Contenedor del cubo de Rubik -->
+        <div id="rubik-container" class="w-full md:w-1/2 lg:w-1/3 flex justify-center max-w-[400px] mx-auto py-[-24px]">
+        <!-- El cubo de Rubik se renderizará aquí -->
+        </div>
+    </div>
+    </SectionContainer>
+
+    <SectionContainer id="skills" class="pb-10">
+      <div class="flex justify-start border-b-2 border-black drop-shadow-[-2px_-2px_1px_rgba(0,0,0,1)]">
+        <h2 
+          class="text-3xl lg:text-4xl font-bold tracking-widest mb-3 flex gap-x-3 items-center 
+        ">
+          <CodeIcon class="size-7" />
+          Skills
+        </h2>
+      </div>
+      <Skills />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <div class="flex justify-start border-b-2 border-black drop-shadow-[-2px_-2px_1px_rgba(0,0,0,1)]">
+        <h2 class="text-3xl lg:text-4xl font-bold tracking-widest mb-3 flex gap-x-3 items-center 
+        ">
+          <CodeIcon class="size-7" />
+          Proyectos
+        </h2>
+      </div>
+      <CardNormal />
+    </SectionContainer>
+  </main>
+
+  <!-- Script para el cubo de Rubik -->
+  <script type="module" src="/src/js/rubik.js" defer></script>
+</MainLayout>
+
+<style>
+  /* Ajustes para el contenedor del cubo de Rubik */
+  #rubik-container {
+    height: auto; /* Ajusta la altura según sea necesario */
+    position: relative;
+    width: 100%; /* Asegurar que no exceda el ancho del contenedor padre */
+  }
+
+  /* Asegurar que el canvas de Three.js ocupe todo el contenedor */
+  #rubik-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+    /* Ajustes específicos para móviles */
+	@media (max-width: 768px) {
+    #rubik-container {
+      margin-top: -15rem; /* Espaciado superior reducido */
+      margin-bottom: -15rem; /* Espaciado inferior reducido */
+    }
+  }
+
+  /* Evitar el desbordamiento horizontal en toda la página */
+  body {
+    overflow-x: hidden;
+  }
+
+  .inset-text-effect {
+    text-shadow: 
+    2px 2px 1px rgba(0, 0, 0, 0.8),      /* Sombra oscura inferior derecha */
+    -2px -2px 1px rgba(0, 0, 0, 0.4);    /* Sombra más clara superior izquierda */
+  }
+
+</style>

@@ -1,0 +1,14 @@
+[
+    {
+      "slug": "primer-post",
+      "title": "Primer Post",
+      "description": "Esta es la descripción del primer post.",
+      "content": "Este es el contenido del primer post."
+    },
+    {
+      "slug": "segundo-post",
+      "title": "Segundo Post",
+      "description": "Esta es la descripción del segundo post.",
+      "content": "Este es el contenido del segundo post."
+    }
+  ]

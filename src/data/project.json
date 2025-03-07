@@ -1,0 +1,120 @@
+{
+    "TAGS": {
+      "NEXT": {
+        "name": "Next.js",
+        "class": "bg-black text-white",
+        "icon": "NextJS"
+      },
+      "TAILWIND": {
+        "name": "Tailwind",
+        "class": "bg-[#003159] text-white",
+        "icon": "Tailwind"
+      },
+      "REACT": {
+        "class": "bg-black",
+        "icon": "ReactJS",
+        "name": "React.js"
+      },
+      "ASTRO": {
+        "class": "bg-[#003159]",
+        "icon": "AstroJS",
+        "name": "Astro.js"
+      },
+      "VITEJS": {
+        "class": "",
+        "icon": "ViteJS",
+        "name": "Vite.js"
+      },
+      "CSS": {
+        "class": " bg-[#003159] text-white ",
+        "icon": "CSS",
+        "name": "CSS"
+      },
+      "JAVASCRIPT": {
+        "class": "bg-[#003159] text-white",
+        "icon": "JavaScript",
+        "name": "JavaScript"
+      },
+      "TYPESCRIPT": {
+        "class": " bg-black",
+        "icon": "TypeScript",
+        "name": "TypeScript"
+      },
+      "API": {
+        "class": "bg-[#003159] text-white",
+        "icon": "Api",
+        "name": "Api Rest"
+      },
+      "HEADLESSUI": {
+        "class": " bg-black",
+        "icon": "HeadlessUI",
+        "name": "HeadlessUI"
+      }
+    },
+    "PROJECTS": [
+      {
+        "title": "SpaceX Clone",
+        "description": "Clonación del sitio web de SpaceX utilizando tecnologías como AstroJS, React y Tailwind. Explora los lanzamientos a través de esta recreación, desarrollada con TypeScript y aprovechando la API gratuita de SpaceX.",
+        "link": "https://astro-spacex-clone.vercel.app/",
+        "github": "https://github.com/NatalioDev/astro-spacex-clone",
+        "image": "/projects/SpaceX.webp",
+        "tags": ["ASTRO", "REACT", "TAILWIND", "TYPESCRIPT", "API", "HEADLESSUI"]
+      },
+      {
+        "title": "Multi Step Form",
+        "description": "Formulario de varios pasos donde puse a prueba mis habilidades para validar tipos y condiciones en las distintas etapas del formulario. Uno de mi primeros proyectos con TypeScript. Desafío de la plataforma de Frontend Mentor.",
+        "link": "https://nataliodev.github.io/multi-step-form/",
+        "github": "https://github.com/NatalioDev/multi-step-form",
+        "image": "/projects/MultiStepForm-1.webp",
+        "tags": ["VITEJS", "REACT", "TAILWIND", "TYPESCRIPT"]
+      },
+      {
+        "title": "Easybank Landing Page",
+        "description": "Página de inicio, donde puse a prueba mis habilidades de diseño y distintas transiciones dentro de la página. También es un desafío de la plataforma Frontend Mentor.",
+        "link": "https://nataliodev.github.io/Easybank-landing-page/",
+        "github": "https://github.com/NatalioDev/Easybank-landing-page",
+        "image": "/projects/Easybank-1.webp",
+        "tags": ["VITEJS", "REACT", "TAILWIND", "TYPESCRIPT", "HEADLESSUI"]
+      },
+      {
+        "title": "Weather App",
+        "description": "Aplicación del clima, donde aplico mis conceptos de manejo de estados (Hooks) con React y el uso de una API para mostrar los datos que el usuario solicite en tiempo real.",
+        "link": "https://nataliodg.github.io/react-weather-app/",
+        "github": "https://github.com/Nataliodg/react-weather-app",
+        "image": "/projects/WeatherApp.webp",
+        "tags": ["REACT", "CSS"]
+      },
+      {
+        "title": "CocaCola Landing Page Clone",
+        "description": "Esta es mi primera página realizada con puro HTML y CSS. Intenta replicar la página de inicio de una empresa.",
+        "link": "https://nataliodg.github.io/Sitio-Web-1/",
+        "github": "https://github.com/Nataliodg/Sitio-Web-1",
+        "image": "/projects/CocaColaClone.webp",
+        "tags": ["CSS"]
+      },
+      {
+        "title": "Social Media Theme Switcher",
+        "description": "En esta aplicación, sigo poniendo a prueba mis conocimientos en el uso de estados, creando un modo oscuro. Agrego el hook useContext de React para que el modo oscuro o claro se pueda usar en los distintos componentes. Esta práctica es muy útil en aplicaciones más grandes.",
+        "link": "https://nataliodev.github.io/social-media-theme-switcher/",
+        "github": "https://github.com/NatalioDev/social-media-theme-switcher",
+        "image": "/projects/social-media-switcher-theme.webp",
+        "tags": ["REACT", "CSS", "VITEJS"]
+      },
+      {
+        "title": "Snap Landing Page",
+        "description": "Sección de introducción con navegación desplegable. Desafío de Frontend Mentor donde pongo a prueba mi capacidad para crear menús desplegables y de diseño básicos.",
+        "link": "https://astro-landing-page-dropdown-jbsm81ffp-nataliodevs-projects.vercel.app/",
+        "github": "https://github.com/NatalioDev/astro-landing-page-dropdown",
+        "image": "/projects/SnapLandingPage.webp",
+        "tags": ["ASTRO", "REACT", "TAILWIND", "TYPESCRIPT", "HEADLESSUI"]
+      },
+      {
+        "title": "Anterior Portafolio",
+        "description": "Mi primer portafolio, donde se aprecia, a mi parecer, el crecimiento que tuve desde que empecé a desarrollar proyectos. También se pueden ver mis conocimientos en algo de backend, pero me decidí por el desarrollo frontend porque me apasiona más el diseño de interfaces modernas.",
+        "link": "https://next-portafolio-nataliodg.vercel.app/",
+        "github": "https://github.com/Nataliodg/next-portafolio",
+        "image": "/projects/AntiguoPortafolio.webp",
+        "tags": ["NEXT", "CSS"]
+      }
+    ]
+  }

@@ -1,14 +1,11 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import react from "@astrojs/react";
 
-import react from '@astrojs/react';
-import tailwindcss from '@tailwindcss/vite';
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()],
-
-  vite: {
-    plugins: [tailwindcss()]
-  }
+  // site: 'https://NatalioDev.github.io',
+  // base: '/astro-landing-page-dropdown/',
+  integrations: [react(), tailwind()]
 });

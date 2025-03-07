@@ -1,0 +1,76 @@
+---
+import AstroJS from "./Icons/AstroJS.astro"
+import CSS from "./Icons/CSS.astro"
+import JavaScript from "./Icons/JavaScript.astro"
+import NextJS from "./Icons/NextJS.astro"
+import ReactJS from "./Icons/ReactJS.astro"
+import Tailwind from "./Icons/Tailwind.astro"
+import TypeScript from "./Icons/TypeScript.astro"
+import ViteJS from "./Icons/ViteJS.astro"
+
+
+
+const TAGS = [
+  {
+    class: "bg-black text-white",
+    icon: NextJS,
+    name: "Next.js",
+  },
+  {
+    class: "bg-transparent",
+    icon: ReactJS,
+    name: "React.js",
+  },
+  {
+    class: "bg-[#003159]",
+    icon: AstroJS,
+    name: "Astro.js",
+  },
+  {
+    class: "",
+    icon: ViteJS,
+    name: "Vite.js",
+  },
+  {
+    class: "",
+    icon: Tailwind,
+    name: "Tailwind CSS",
+  },
+  {
+    class: " ",
+    icon: CSS,
+    name: "CSS",
+  },
+  {
+    class: " ",
+    icon: JavaScript,
+    name: "JavaScript",
+  },
+  {
+    class: " ",
+    icon: TypeScript,
+    name: "TypeScript",
+  },
+]
+---
+
+<style>
+  .icon-container:hover {
+    transform: scale(1.2); /* Ajusta el valor según tu preferencia */
+  }
+</style>
+
+<div class="max-w-screen-xl mx-auto pt-10">
+  <ul class="flex flex-wrap gap-2 mb-2 ">
+    {TAGS.map(({ class: tagClass, icon: Icon, name }) => (
+      <li>
+        <span
+          class={`flex gap-x-1 rounded-full ${tagClass} py-1 px-2 icon-container`}
+          title={name}
+        >
+          <Icon class="size-12 md:size-16" />
+        </span>
+      </li>
+    ))}
+  </ul>
+</div>

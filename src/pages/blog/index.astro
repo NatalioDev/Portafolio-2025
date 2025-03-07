@@ -1,0 +1,21 @@
+---
+import SectionContainer from 'src/components/Container/SectionContainer.astro';
+import postsData from '../../data/posts.json'; // Importar el archivo JSON
+import BlogLayout from 'src/layouts/BlogLayout.astro';
+---
+
+<BlogLayout title="Blog" description="Listado de todos los posts">
+  <SectionContainer class="pt-20">
+    <h1>Blog</h1>
+    <ul>
+      {
+        postsData.map(post => (
+          <li>
+            <a href={`/blog/${post.slug}`}>{post.title}</a>
+            <p>{post.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </SectionContainer>
+</BlogLayout>

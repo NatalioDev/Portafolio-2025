@@ -1,0 +1,22 @@
+---
+import type { GetStaticPaths } from "astro";
+import MainLayout from 'src/layouts/MainLayout.astro';
+import postsData from '../../data/posts.json';
+
+// Definir la función getStaticpaths
+export const getStaticPaths = (() => {
+    // Mapear los posts para generar las rutas estáticas
+    return postsData.map(post => ({
+        params: { slug: post.slug}, // Parámetro de la ruta
+        props: { post } // Pasar el post como prop
+    }))
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+---
+
+<MainLayout title={post.title} description={post.description}>
+  <h1>{post.title}</h1>
+  <p>{post.content}</p>
+  <a href="/blog">Volver al Blog</a>
+</MainLayout>

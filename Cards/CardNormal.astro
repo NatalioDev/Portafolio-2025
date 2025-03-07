@@ -1,0 +1,97 @@
+---
+import Api from "../Icons/Api.astro";
+import AstroJS from "../Icons/AstroJS.astro";
+import CSS from "../Icons/CSS.astro";
+import HeadlessUI from "../Icons/HeadlessUI.astro";
+import JavaScript from "../Icons/JavaScript.astro";
+import NextJS from "../Icons/NextJS.astro";
+import ReactJS from "../Icons/ReactJS.astro";
+import Tailwind from "../Icons/Tailwind.astro";
+import TypeScript from "../Icons/TypeScript.astro";
+import ViteJS from "../Icons/ViteJS.astro";
+
+import data from '../../data/project.json';
+import SocialPill from "../SocialPill.astro";
+
+// Definir un tipo para las claves de iconComponents
+type IconKey = keyof typeof iconComponents;
+
+const iconComponents ={
+    AstroJS,
+    CSS,
+    JavaScript,
+    NextJS,
+    ReactJS,
+    Tailwind,
+    TypeScript,
+    ViteJS,
+    HeadlessUI,
+    Api,
+};
+
+const TAGS = Object.fromEntries(
+    Object.entries(data.TAGS).map(([key, tag]) => [
+        key,
+        {
+            ...tag,
+            icon: iconComponents[tag.icon as IconKey],
+        },
+    ])
+);
+
+const PROJECTS = data.PROJECTS.map((project) => ({
+    ...project,
+    tags: project.tags.map((tagKey) => TAGS[tagKey]),
+}));
+
+---
+
+{
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="py-8">
+        <h3 class="text-3xl lg:text-4xl font-extrabold text-black inset-text-effect mb-2">{title}</h3>
+        <p class="text-base lg:text-lg mb-4 mt-2 text-pretty">{description}</p>
+        <p class="text-base lg:text-lg mb-4 text-pretty">
+          Visita el 
+            <a
+              class="text-[#5ed150] font-semibold"
+              target="_blank" 
+              rel="noreferrer noopener" 
+              href={link}>
+                sitio aquí
+            </a> 
+          o revisa el código en 
+            <a
+              class="text-[#5ed150] font-semibold"
+              target="_blank" 
+              rel="noreferrer noopener" 
+              href={github}>
+                GitHub.
+              </a>
+          </p>
+        <ul class="flex flex-wrap gap-x-2 flex-row mb-2 px-2 max-w-full overflow-hidden z-50">
+          {tags.map((tag) => (
+            <li class="my-4">
+              <SocialPill>
+                <tag.icon class="size-4 md:size-6 lg:size-8" />
+                {tag.name}
+              </SocialPill>
+            </li>
+          ))}
+        </ul>
+        <img
+          class="rounded-xl shadow-lg shadow-black/60 pt-4 max-h-[450px]"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${image}`}
+        />
+      </article>
+    ))
+  }
+
+  <style>
+    .inset-text-effect {
+    text-shadow: 
+    -1px -1px 0px rgba(94, 209, 80, 0.3),      /* Sombra oscura inferior derecha */
+    -1px -1px 0px rgba(0, 0, 0, 0.4);    /* Sombra más clara superior izquierda */
+  }
+  </style>

@@ -1,0 +1,41 @@
+<header
+  class="flex justify-center items-center py-5 w-full xl:w-full fixed bg-header mx-auto z-50 shadow-lg shadow-black/70"
+>
+  <nav class="flex flex-row gap-x-10 opacity-80 font-semibold">
+    <a class="link_hover relative hover:text-[#47e931] hover:font-bold" href="/">Inicio</a>
+    <a class="link_hover relative hover:text-[#47e931] hover:font-bold" href="#proyectos">Proyectos</a>
+    <a class="link_hover relative hover:text-[#47e931] hover:font-bold" href="mailto:nataliodg.dev@gmail.com">Contacto</a>
+    <a class="link_hover relative hover:text-[#47e931] hover:font-bold" href="/blog">Blog</a>
+  </nav>
+</header>
+
+<style>
+
+  .bg-header {
+    background: rgb(0,0,0);
+    background: linear-gradient(
+      95deg, 
+      rgba(3, 75, 22,1) 0%, 
+      rgba(0, 0, 0, 0.979) 50%,  /* Cambiado a opaco */
+      rgba(3, 75, 22,1) 100%
+    ); 
+  }
+
+  .link_hover:hover::after{
+    transform: scaleX(1);
+  }
+  .link_hover::after{
+    width: 100%;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    content: "";
+    transform: scaleX(0);
+    transition: transform .3s ease 0s;
+    background-color: #47e931;
+    border-radius: 2px;
+  }
+
+</style>
