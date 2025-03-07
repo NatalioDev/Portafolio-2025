@@ -49,7 +49,7 @@ const PROJECTS = data.PROJECTS.map((project) => ({
 {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article class="py-8">
-        <h3 class="text-3xl lg:text-4xl font-extrabold text-black inset-text-effect mb-2">{title}</h3>
+        <h3 class="text-3xl lg:text-4xl font-extrabold text-black inset-text-effect-card mb-2">{title}</h3>
         <p class="text-base lg:text-lg mb-4 mt-2 text-pretty">{description}</p>
         <p class="text-base lg:text-lg mb-4 text-pretty">
           Visita el 
@@ -89,7 +89,7 @@ const PROJECTS = data.PROJECTS.map((project) => ({
   }
 
   <style>
-    .inset-text-effect {
+    .inset-text-effect-card {
     text-shadow: 
     -1px -1px 0px rgba(94, 209, 80, 0.3),      /* Sombra oscura inferior derecha */
     -1px -1px 0px rgba(0, 0, 0, 0.4);    /* Sombra más clara superior izquierda */
