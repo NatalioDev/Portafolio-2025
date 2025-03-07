@@ -57,7 +57,7 @@
         "description": "Clonación del sitio web de SpaceX utilizando tecnologías como AstroJS, React y Tailwind. Explora los lanzamientos a través de esta recreación, desarrollada con TypeScript y aprovechando la API gratuita de SpaceX.",
         "link": "https://astro-spacex-clone.vercel.app/",
         "github": "https://github.com/NatalioDev/astro-spacex-clone",
-        "image": "/Portafolio-2025/projects/SpaceX.webp",
+        "image": "/projects/SpaceX.webp",
         "tags": ["ASTRO", "REACT", "TAILWIND", "TYPESCRIPT", "API", "HEADLESSUI"]
       },
       {
@@ -65,7 +65,7 @@
         "description": "Formulario de varios pasos donde puse a prueba mis habilidades para validar tipos y condiciones en las distintas etapas del formulario. Uno de mi primeros proyectos con TypeScript. Desafío de la plataforma de Frontend Mentor.",
         "link": "https://nataliodev.github.io/multi-step-form/",
         "github": "https://github.com/NatalioDev/multi-step-form",
-        "image": "/Portafolio-2025/projects/MultiStepForm-1.webp",
+        "image": "/projects/MultiStepForm-1.webp",
         "tags": ["VITEJS", "REACT", "TAILWIND", "TYPESCRIPT"]
       },
       {
@@ -73,7 +73,7 @@
         "description": "Página de inicio, donde puse a prueba mis habilidades de diseño y distintas transiciones dentro de la página. También es un desafío de la plataforma Frontend Mentor.",
         "link": "https://nataliodev.github.io/Easybank-landing-page/",
         "github": "https://github.com/NatalioDev/Easybank-landing-page",
-        "image": "/Portafolio-2025/projects/Easybank-1.webp",
+        "image": "/projects/Easybank-1.webp",
         "tags": ["VITEJS", "REACT", "TAILWIND", "TYPESCRIPT", "HEADLESSUI"]
       },
       {
@@ -81,7 +81,7 @@
         "description": "Aplicación del clima, donde aplico mis conceptos de manejo de estados (Hooks) con React y el uso de una API para mostrar los datos que el usuario solicite en tiempo real.",
         "link": "https://nataliodg.github.io/react-weather-app/",
         "github": "https://github.com/Nataliodg/react-weather-app",
-        "image": "/Portafolio-2025/projects/WeatherApp.webp",
+        "image": "/projects/WeatherApp.webp",
         "tags": ["REACT", "CSS"]
       },
       {
@@ -89,7 +89,7 @@
         "description": "Esta es mi primera página realizada con puro HTML y CSS. Intenta replicar la página de inicio de una empresa.",
         "link": "https://nataliodg.github.io/Sitio-Web-1/",
         "github": "https://github.com/Nataliodg/Sitio-Web-1",
-        "image": "/Portafolio-2025/projects/CocaColaClone.webp",
+        "image": "/projects/CocaColaClone.webp",
         "tags": ["CSS"]
       },
       {
@@ -97,7 +97,7 @@
         "description": "En esta aplicación, sigo poniendo a prueba mis conocimientos en el uso de estados, creando un modo oscuro. Agrego el hook useContext de React para que el modo oscuro o claro se pueda usar en los distintos componentes. Esta práctica es muy útil en aplicaciones más grandes.",
         "link": "https://nataliodev.github.io/social-media-theme-switcher/",
         "github": "https://github.com/NatalioDev/social-media-theme-switcher",
-        "image": "/Portafolio-2025/projects/social-media-switcher-theme.webp",
+        "image": "/projects/social-media-switcher-theme.webp",
         "tags": ["REACT", "CSS", "VITEJS"]
       },
       {
@@ -105,7 +105,7 @@
         "description": "Sección de introducción con navegación desplegable. Desafío de Frontend Mentor donde pongo a prueba mi capacidad para crear menús desplegables y de diseño básicos.",
         "link": "https://astro-landing-page-dropdown-jbsm81ffp-nataliodevs-projects.vercel.app/",
         "github": "https://github.com/NatalioDev/astro-landing-page-dropdown",
-        "image": "/Portafolio-2025/projects/SnapLandingPage.webp",
+        "image": "/projects/SnapLandingPage.webp",
         "tags": ["ASTRO", "REACT", "TAILWIND", "TYPESCRIPT", "HEADLESSUI"]
       },
       {
@@ -113,7 +113,7 @@
         "description": "Mi primer portafolio, donde se aprecia, a mi parecer, el crecimiento que tuve desde que empecé a desarrollar proyectos. También se pueden ver mis conocimientos en algo de backend, pero me decidí por el desarrollo frontend porque me apasiona más el diseño de interfaces modernas.",
         "link": "https://next-portafolio-nataliodg.vercel.app/",
         "github": "https://github.com/Nataliodg/next-portafolio",
-        "image": "/Portafolio-2025/projects/AntiguoPortafolio.webp",
+        "image": "/projects/AntiguoPortafolio.webp",
         "tags": ["NEXT", "CSS"]
       }
     ]
