@@ -56,7 +56,7 @@ import RubikCube from "../components/RubikCube";
           </nav>
         </div>
         <!-- Contenedor del cubo de Rubik -->
-        <div id="rubik-container" class="w-full z-20 md:w-1/2 lg:w-1/3 flex justify-center max-w-[400px] mx-auto lg:py-[-24px]">
+        <div id="rubik-container" class="w-full md:w-1/2 lg:w-1/3 flex justify-center max-w-[400px] min-h-[300px] mx-auto lg:py-[-24px]">
         <!-- El cubo de Rubik se renderizará aquí -->
           <RubikCube client:only="react"/>
         </div>
@@ -105,8 +105,9 @@ import RubikCube from "../components/RubikCube";
     /* Ajustes específicos para móviles */
 	@media (max-width: 450px) {
     #rubik-container {
-      display: contents;
-
+      margin-top: -12rem; /* Espaciado superior reducido */
+      margin-bottom: -12rem; /* Espaciado inferior reducido */
+      max-height: 800px;
     }
   }
 
