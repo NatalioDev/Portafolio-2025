@@ -158,6 +158,12 @@ const RubikCube = () => {
     }, 500)
   });
 
+  let isScrolling = false;
+  window.addEventListener("scroll", () =>{
+    isScrolling = true;
+    clearTimeout(resizeTimeout) // Evitar redimensionamiento durante el scroll
+  })
+
   // Gestión de animación cuando se cambia de pestaña
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
