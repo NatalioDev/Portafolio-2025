@@ -27,7 +27,6 @@ const RubikCube = () => {
     container.appendChild(renderer.domElement);
     console.log('Canvas added to DOM:', renderer.domElement); // Verifica que el canvas se haya agregado
 
-    // Resto del código de Three.js...
     const rubikGroup = new THREE.Group();
     scene.add(rubikGroup);
 
@@ -72,7 +71,6 @@ const RubikCube = () => {
 
     animate();
 
-    // Resto del código de Three.js...
       // Función para rotar una cara sin perder cubos
   function rotateFace(axis, layer, direction) {
     const angle = (Math.PI / 2) * direction;
