@@ -1,27 +1,35 @@
 [
       {
         "id": 1,
-        "title": "SpaceX Clone",
-        "description": "Clonación del sitio web de SpaceX utilizando tecnologías como AstroJS, React y Tailwind. Explora los lanzamientos a través de esta recreación, desarrollada con TypeScript y aprovechando la API gratuita de SpaceX.",
-        "link": "https://astro-spacex-clone.vercel.app/",
-        "github": "https://github.com/NatalioDev/astro-spacex-clone",
-        "image": "/projects/SpaceX.webp"
+        "title": "ToDo App",
+        "description": "ToDo App es un organizador de tareas, donde podes filtrar y re-organizar las tareas según la prioridad, simplemente arrastrando los ToDo.",
+        "link": "https://nataliodev.github.io/study-project-react/",
+        "link2":"https://nataliodev.github.io/todo-app-react/",
+        "github": "https://github.com/NatalioDev/study-project-react/tree/ToDo-List",
+        "github2":"https://github.com/NatalioDev/todo-app-react",
+        "image": "/projects/ToDo-App-img.png",
+        "image2": "/projects/ToDo-App-V1-img.png"
       },
       {
         "id": 2,
-        "title": "Multi Step Form",
-        "description": "Formulario de varios pasos donde puse a prueba mis habilidades para validar tipos y condiciones en las distintas etapas del formulario. Uno de mi primeros proyectos con TypeScript. Desafío de la plataforma de Frontend Mentor.",
-        "link": "https://nataliodev.github.io/multi-step-form/",
-        "github": "https://github.com/NatalioDev/multi-step-form",
-        "image": "/projects/MultiStepForm-1.webp"
+        "title": "Piedra, Papel o Tijera",
+        "description": "El clásico juego de piedra, papel o tijera, solo que tambien hay una opción mas avanzada para los curiosos.",
+        "link": "https://nataliodev.github.io/rock-paper-scissors-game-react/",
+        "github": "https://github.com/NatalioDev/rock-paper-scissors-game-react",
+        "image": "/projects/PPT1.png",
+        "image2": "/projects/PPT2.png",
+        "image3": "/projects/PPT3.png"
       },
       {
         "id": 3,
-        "title": "Easybank Landing Page",
-        "description": "Página de inicio, donde puse a prueba mis habilidades de diseño y distintas transiciones dentro de la página. También es un desafío de la plataforma Frontend Mentor.",
-        "link": "https://nataliodev.github.io/Easybank-landing-page/",
-        "github": "https://github.com/NatalioDev/Easybank-landing-page",
-        "image": "/projects/Easybank-1.webp"
+        "title": "Food Recipe App",
+        "description": "Aplicación para buscar recetas por ingredientes",
+        "link": "https://nataliodev.github.io/food-recipe-v2/",
+        "link2": "https://nataliodev.github.io/food-recipe-app/",
+        "github": "https://github.com/NatalioDev/food-recipe-v2",
+        "github2": "https://github.com/NatalioDev/food-recipe-app",
+        "image": "/projects/food-recipe-photo.png",
+        "image2": "/projects/food-recipeV1-photo.png"
       },
       {
         "id": 4,

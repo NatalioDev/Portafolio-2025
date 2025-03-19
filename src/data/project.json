@@ -75,46 +75,6 @@
         "github": "https://github.com/NatalioDev/Easybank-landing-page",
         "image": "/projects/Easybank-1.webp",
         "tags": ["VITEJS", "REACT", "TAILWIND", "TYPESCRIPT", "HEADLESSUI"]
-      },
-      {
-        "title": "Weather App",
-        "description": "Aplicación del clima, donde aplico mis conceptos de manejo de estados (Hooks) con React y el uso de una API para mostrar los datos que el usuario solicite en tiempo real.",
-        "link": "https://nataliodg.github.io/react-weather-app/",
-        "github": "https://github.com/Nataliodg/react-weather-app",
-        "image": "/projects/WeatherApp.webp",
-        "tags": ["REACT", "CSS"]
-      },
-      {
-        "title": "CocaCola Landing Page Clone",
-        "description": "Esta es mi primera página realizada con puro HTML y CSS. Intenta replicar la página de inicio de una empresa.",
-        "link": "https://nataliodg.github.io/Sitio-Web-1/",
-        "github": "https://github.com/Nataliodg/Sitio-Web-1",
-        "image": "/projects/CocaColaClone.webp",
-        "tags": ["CSS"]
-      },
-      {
-        "title": "Social Media Theme Switcher",
-        "description": "En esta aplicación, sigo poniendo a prueba mis conocimientos en el uso de estados, creando un modo oscuro. Agrego el hook useContext de React para que el modo oscuro o claro se pueda usar en los distintos componentes. Esta práctica es muy útil en aplicaciones más grandes.",
-        "link": "https://nataliodev.github.io/social-media-theme-switcher/",
-        "github": "https://github.com/NatalioDev/social-media-theme-switcher",
-        "image": "/projects/social-media-switcher-theme.webp",
-        "tags": ["REACT", "CSS", "VITEJS"]
-      },
-      {
-        "title": "Snap Landing Page",
-        "description": "Sección de introducción con navegación desplegable. Desafío de Frontend Mentor donde pongo a prueba mi capacidad para crear menús desplegables y de diseño básicos.",
-        "link": "https://astro-landing-page-dropdown-jbsm81ffp-nataliodevs-projects.vercel.app/",
-        "github": "https://github.com/NatalioDev/astro-landing-page-dropdown",
-        "image": "/projects/SnapLandingPage.webp",
-        "tags": ["ASTRO", "REACT", "TAILWIND", "TYPESCRIPT", "HEADLESSUI"]
-      },
-      {
-        "title": "Anterior Portafolio",
-        "description": "Mi primer portafolio, donde se aprecia, a mi parecer, el crecimiento que tuve desde que empecé a desarrollar proyectos. También se pueden ver mis conocimientos en algo de backend, pero me decidí por el desarrollo frontend porque me apasiona más el diseño de interfaces modernas.",
-        "link": "https://next-portafolio-nataliodg.vercel.app/",
-        "github": "https://github.com/Nataliodg/next-portafolio",
-        "image": "/projects/AntiguoPortafolio.webp",
-        "tags": ["NEXT", "CSS"]
       }
     ]
   }
