@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectsLitle from '../../data/projectLitle.json';
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import { LuLink } from 'react-icons/lu';
 import { Menu, Transition } from '@headlessui/react';
 
