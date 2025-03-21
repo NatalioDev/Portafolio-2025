@@ -10,20 +10,14 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
   // Verifica si hay multiples enlaces
   const hasMultipleLinks = link2 || github2
 
-  // Estados para manejar los Menú
-  const [isLinkMenuOpen, setIsLinkMenuOpen] = useState(false);
-  const [isGithubMenuOpen, setIsGithubkMenuOpen] = useState(false);
+  // // Estados para manejar los Menú
+  // const [activeMenu, setActiveMenu] = useState(null);
 
-  // Funciones para manejar los Menú
-  const openLinkMenu = () =>{
-    setIsLinkMenuOpen(true);
-    setIsGithubkMenuOpen(false);
-  }
+  // // Funciones para manejar los Menú
+  // const toggleMenu = () =>{
+  //   setActiveMenu(activeMenu === menu ? null : menu);
+  // }
 
-  const openGithubMenu = () =>{
-    setIsLinkMenuOpen(false);
-    setIsGithubkMenuOpen(true);
-  }
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-8 my-16 border-b-2 border-black/30 pb-12">
@@ -52,7 +46,6 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
           {hasMultipleLinks ? (
             <Menu as="div" className="relative">
               <Menu.Button
-                onClick={openLinkMenu}
                 className="bg-white/5 
                 border border-white/10 rounded-full
                 flex justify-center items-center gap-x-2
@@ -64,7 +57,6 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
                 <LuLink/>
               </Menu.Button>
               <Transition
-                show={isLinkMenuOpen}
                 enter='transition duration-100 ease-out'
                 enterFrom='transform scale-95 opacity-0'
                 enterTo='transform scale-100 opacity-100'
@@ -134,7 +126,6 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
           {hasMultipleLinks ? (
             <Menu as="div" className="relative">
             <Menu.Button
-              onClick={openGithubMenu}
               className="bg-white/5 
               border border-white/10 rounded-full
               flex justify-center items-center gap-x-2
@@ -146,7 +137,6 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
               <FaGithub/>
             </Menu.Button>
             <Transition
-              show={isGithubMenuOpen}
               enter='transition duration-100 ease-out'
               enterFrom='transform scale-95 opacity-0'
               enterTo='transform scale-100 opacity-100'
@@ -155,7 +145,7 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
               leaveTo='transform scale-95 opacity-0'
             >
               <Menu.Items
-                className="absolute left-0 mt-2 w-48 origin-top-left bg-white/5 border border-white/5 rounded-lg focus:outline-none"
+                  className="absolute left-0 mt-2 w-48 origin-top-left bg-white/5 border border-white/5 rounded-lg focus:outline-none"
               >
                 <div className="p-1">
                   {github && (
