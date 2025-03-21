@@ -20,7 +20,7 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
 
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-8 my-16 border-b-2 border-black/30 pb-12">
+    <div className="flex flex-col md:flex-row items-center justify-center text-center gap-8 my-16 border-b-2 border-black/30 pb-12">
       {/* Imagen siempre primero en móvil, orden alternado en desktop */}
       <div
         className={`w-full md:w-1/2 shadow-lg shadow-black/50 rounded-lg group order-1 ${
@@ -39,9 +39,9 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
           isImageOnLeft ? "md:order-2" : "md:order-1"
         }`}
       >
-        <h2 className="text-2xl font-bold mb-4">{title}</h2>
+        <h2 className="text-2xl  font-bold mb-4">{title}</h2>
         <p className="text-gray-300 mb-6">{description}</p>
-        <div className="flex gap-4">
+        <div className="flex gap-4 md:flex-row justify-center">
           {/* Dropdown para múltiples enlaces */}
           {hasMultipleLinks ? (
             <Menu as="div" className="relative">
@@ -65,7 +65,7 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
                 leaveTo='transform scale-95 opacity-0'
               >
                 <Menu.Items
-                  className="absolute left-0 mt-2 w-48 origin-top-left bg-white/5 border border-white/5 rounded-lg focus:outline-none"
+                  className="absolute right-0 mt-2 w-36 origin-top-right bg-white/5 border border-white/5 rounded-lg focus:outline-none"
                 >
                   <div className="p-1">
                     {link && (
@@ -145,7 +145,7 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
               leaveTo='transform scale-95 opacity-0'
             >
               <Menu.Items
-                  className="absolute left-0 mt-2 w-48 origin-top-left bg-white/5 border border-white/5 rounded-lg focus:outline-none"
+                  className="absolute left-0  mt-2 w-36 origin-bottom-left bg-white/5 border border-white/5 rounded-lg focus:outline-none"
               >
                 <div className="p-1">
                   {github && (
