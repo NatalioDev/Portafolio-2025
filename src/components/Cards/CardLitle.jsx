@@ -39,7 +39,7 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
           isImageOnLeft ? "md:order-2" : "md:order-1"
         }`}
       >
-        <h2 className="text-2xl  font-bold mb-4">{title}</h2>
+        <h2 className="text-2xl drop-shadow-[2px_2px_1px_rgba(0,0,0,1)] font-bold mb-4">{title}</h2>
         <p className="text-gray-300 mb-6">{description}</p>
         <div className="flex gap-4 md:flex-row justify-center">
           {/* Dropdown para múltiples enlaces */}
