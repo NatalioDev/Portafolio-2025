@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectsLitle from '../../data/projectLitle.json';
 import { FaGithub } from 'react-icons/fa';
 import { LuLink } from 'react-icons/lu';
@@ -10,17 +10,32 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
   // Verifica si hay multiples enlaces
   const hasMultipleLinks = link2 || github2
 
+  // Estados para manejar los Menú
+  const [isLinkMenuOpen, setIsLinkMenuOpen] = useState(false);
+  const [isGithubMenuOpen, setIsGithubkMenuOpen] = useState(false);
+
+  // Funciones para manejar los Menú
+  const openLinkMenu = () =>{
+    setIsLinkMenuOpen(true);
+    setIsGithubkMenuOpen(false);
+  }
+
+  const openGithubMenu = () =>{
+    setIsLinkMenuOpen(false);
+    setIsGithubkMenuOpen(true);
+  }
+
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-8 my-8 border-b-2 border-black/30 pb-8">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-8 my-16 border-b-2 border-black/30 pb-12">
       {/* Imagen siempre primero en móvil, orden alternado en desktop */}
       <div
-        className={`w-full md:w-1/2 order-1 ${
+        className={`w-full md:w-1/2 shadow-lg shadow-black/50 rounded-lg group order-1 ${
           isImageOnLeft ? "md:order-1" : "md:order-2"
         }`}
       >
         <img
           src={image}
-          className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+          className="w-full h-64 md:h-96 object-cover group-hover:scale-110 duration-300 rounded-lg block shadow-lg"
         />
       </div>
 
@@ -31,23 +46,25 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
         }`}
       >
         <h2 className="text-2xl font-bold mb-4">{title}</h2>
-        <p className="text-gray-600 mb-6">{description}</p>
+        <p className="text-gray-300 mb-6">{description}</p>
         <div className="flex gap-4">
           {/* Dropdown para múltiples enlaces */}
           {hasMultipleLinks ? (
             <Menu as="div" className="relative">
               <Menu.Button
+                onClick={openLinkMenu}
                 className="bg-white/5 
                 border border-white/10 rounded-full
                 flex justify-center items-center gap-x-2
-                py-1 px-2 md:py-2 md:px-4
-                text-xs md:text-base
+                py-2 px-4 md:py-2 md:px-4
+                text-base md:text-base
                 transition
                 hover:scale-110 hover:bg-white/10"
               >
                 <LuLink/>
               </Menu.Button>
               <Transition
+                show={isLinkMenuOpen}
                 enter='transition duration-100 ease-out'
                 enterFrom='transform scale-95 opacity-0'
                 enterTo='transform scale-100 opacity-100'
@@ -56,7 +73,7 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
                 leaveTo='transform scale-95 opacity-0'
               >
                 <Menu.Items
-                  className="absolute left-0 mt-2 w-48 origin-top-left bg-white/5 border border-white/10 rounded-lg focus:outline-none"
+                  className="absolute left-0 mt-2 w-48 origin-top-left bg-white/5 border border-white/5 rounded-lg focus:outline-none"
                 >
                   <div className="p-1">
                     {link && (
@@ -67,8 +84,8 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
                             target='_blank'
                             rel='noopener noreferrer'
                             className={`${
-                              active ? 'bg-white/10' : ''
-                            } block px-4 py-2 text-sm text-white rounded-lg`}
+                              active ? 'bg-black/50' : ''
+                            } block px-4 py-2 text-sm text-white rounded-lg hover:scale-100 hover:bg-black/50`}
                           >
                             Versión 1
                           </a>
@@ -83,8 +100,8 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
                           target='_blank'
                           rel='noopener noreferrer'
                           className={`${
-                            active ? 'bg-white/10' : ''
-                          } block px-4 py-2 text-sm text-white rounded-lg`}
+                            active ? 'bg-black/50' : ''
+                          } block px-4 py-2 text-sm text-white rounded-lg hover:scale-100 hover:bg-black/50`}
                         >
                           Versión 2
                         </a>
@@ -104,8 +121,8 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
             className="bg-white/5 
                       border border-white/10 rounded-full
                       flex justify-center items-center gap-x-2
-                      py-1 px-2 md:py-2 md:px-4
-                      text-xs md:text-base
+                      py-2 px-4 md:py-2 md:px-4
+                      text-base md:text-base
                       transition
                       hover:scale-110 hover:bg-white/10"
           >
@@ -117,17 +134,19 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
           {hasMultipleLinks ? (
             <Menu as="div" className="relative">
             <Menu.Button
+              onClick={openGithubMenu}
               className="bg-white/5 
               border border-white/10 rounded-full
               flex justify-center items-center gap-x-2
-              py-1 px-2 md:py-2 md:px-4
-              text-xs md:text-base
+              py-2 px-4 md:py-2 md:px-4
+              text-base md:text-base
               transition
               hover:scale-110 hover:bg-white/10"
             >
               <FaGithub/>
             </Menu.Button>
             <Transition
+              show={isGithubMenuOpen}
               enter='transition duration-100 ease-out'
               enterFrom='transform scale-95 opacity-0'
               enterTo='transform scale-100 opacity-100'
@@ -136,7 +155,7 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
               leaveTo='transform scale-95 opacity-0'
             >
               <Menu.Items
-                className="absolute left-0 mt-2 w-48 origin-top-left bg-white/5 border border-white/10 rounded-lg focus:outline-none"
+                className="absolute left-0 mt-2 w-48 origin-top-left bg-white/5 border border-white/5 rounded-lg focus:outline-none"
               >
                 <div className="p-1">
                   {github && (
@@ -148,7 +167,7 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
                           rel='noopener noreferrer'
                           className={`${
                             active ? 'bg-white/10' : ''
-                          } block px-4 py-2 text-sm text-white rounded-lg`}
+                          } block px-4 py-2 text-sm text-white rounded-lg hover:bg-black/50`}
                         >
                           Repositorio 1
                         </a>
@@ -164,7 +183,7 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
                         rel='noopener noreferrer'
                         className={`${
                           active ? 'bg-white/10' : ''
-                        } block px-4 py-2 text-sm text-white rounded-lg`}
+                        } block px-4 py-2 text-sm text-white rounded-lg hover:bg-black/50`}
                       >
                         Repositorio 2
                       </a>
@@ -183,8 +202,8 @@ const Card = ({ image, title, description, isImageOnLeft, link, link2, github, g
             className="bg-white/5 
                       border border-white/10 rounded-full
                       flex justify-center items-center gap-x-2
-                      py-1 px-2 md:py-2 md:px-4
-                      text-xs md:text-base
+                      py-2 px-4 md:py-2 md:px-4
+                      text-base md:text-base
                       transition
                       hover:scale-110 hover:bg-white/10"
           >

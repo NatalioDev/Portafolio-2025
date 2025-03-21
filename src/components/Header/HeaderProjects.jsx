@@ -11,7 +11,7 @@ const HeaderProjects = ({ onSectionChange }) => {
 
 
   return (
-    <header className='flex justify-center rounded-b-full items-center py-5 mt-2 w-full bg-black/80 mx-auto shadow-lg shadow-black/70'>
+    <header className='flex justify-center rounded-b-full border-b-2 border-green-700 items-center py-5 mt-2 w-full bg-black/80 mx-auto shadow-lg shadow-black/70'>
       <nav className="flex flex-row gap-x-10 opacity-80 font-semibold uppercase ">
         <a 
           href="#principales" 
@@ -19,8 +19,9 @@ const HeaderProjects = ({ onSectionChange }) => {
             e.preventDefault();
             handleSectionChange('principales');
           }}
-          className={`mx-10 relative hover:text-[#47e931] hover:font-bold ${
-            activeSection === "principales" ? "text-[#47e931] font-bold" : ""
+          className={`mx-10 relative
+            tracking-wider hover:text-green-500 hover:font-bold ${
+            activeSection === "principales" ? " text-lg font-bold text-green-500" : ""
           }`}
         >
           Principales
@@ -31,8 +32,8 @@ const HeaderProjects = ({ onSectionChange }) => {
             e.preventDefault();
             handleSectionChange('otros');
           }}
-          className={`mx-10 relative hover:text-[#47e931] hover:font-bold ${
-            activeSection === "otros" ? "text-[#47e931] font-bold" : ""
+          className={`mx-10 relative tracking-wider hover:text-green-500 hover:font-bold ${
+            activeSection === "otros" ? "text-lg font-bold text-green-500" : ""
           }`}
         >
           Otros
