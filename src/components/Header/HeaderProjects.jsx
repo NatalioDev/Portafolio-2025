@@ -11,17 +11,17 @@ const HeaderProjects = ({ onSectionChange }) => {
 
 
   return (
-    <header className='flex justify-center rounded-b-full border-b-2 border-green-700 items-center py-5 mt-2 w-full bg-black/80 mx-auto shadow-lg shadow-black/70'>
-      <nav className="flex flex-row gap-x-10 opacity-80 font-semibold uppercase ">
+    <header className='flex justify-center rounded-b-full border-b-2 border-green-700 items-center py-4 mt-2 w-full bg-black/80 mx-auto shadow-lg shadow-black/70'>
+      <nav className="flex flex-row gap-x-2 opacity-80 font-bold uppercase ">
         <a 
           href="#principales" 
           onClick={(e) =>{
             e.preventDefault();
             handleSectionChange('principales');
           }}
-          className={`mx-10 relative
+          className={`mx-5 relative
             tracking-wider hover:text-green-500 hover:font-bold ${
-            activeSection === "principales" ? " text-lg font-bold text-green-500" : ""
+            activeSection === "principales" ? " font-bold text-green-500 drop-shadow-[-2px_-2px_1px_rgba(0,0,0,1)]" : ""
           }`}
         >
           Principales
@@ -32,8 +32,8 @@ const HeaderProjects = ({ onSectionChange }) => {
             e.preventDefault();
             handleSectionChange('otros');
           }}
-          className={`mx-10 relative tracking-wider hover:text-green-500 hover:font-bold ${
-            activeSection === "otros" ? "text-lg font-bold text-green-500" : ""
+          className={`mx-5 relative tracking-wider hover:text-green-500 hover:font-bold ${
+            activeSection === "otros" ? "font-bold text-green-500 drop-shadow-[-2px_-2px_1px_rgba(0,0,0,1)]" : ""
           }`}
         >
           Otros
