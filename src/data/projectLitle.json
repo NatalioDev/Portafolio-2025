@@ -65,7 +65,7 @@
       },
       {
         "id": 8,
-        "title": "Anterior Portafolio",
+        "title": "Primer Portafolio",
         "description": "Mi primer portafolio, donde se aprecia, a mi parecer, el crecimiento que tuve desde que empecé a desarrollar proyectos. También se pueden ver mis conocimientos en algo de backend, pero me decidí por el desarrollo frontend porque me apasiona más el diseño de interfaces modernas.",
         "link": "https://next-portafolio-nataliodg.vercel.app/",
         "github": "https://github.com/Nataliodg/next-portafolio",
